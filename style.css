@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: o;
+  box-sizing: border-box;
+}
+body, html {
+  background: rgba(0, 0, 0, 0.66);
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'poppins', sans-serif;
+}
+.container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.circle{
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border: 2px solid rgba(255, 255, 255, 0.344);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 3;
+}
+.mn{
+  width: 350px;
+  height: 350px;
+  z-index: 2;
+}
+.hr{
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+}
+.circle i{
+  position: absolute;
+  width: 8px;
+  height: 50%;
+  background: var(--clr);
+  opacity: 0.75;
+  transform-origin: bottom;
+  transform: scaley(0.5); 
+}
+.circle:nth-child(1) i{
+  width: 2px;
+}
+circle:nth-child(2) i{
+  width: 6px;
+}
+.circle::before{
+  content: '';
+  position: absolute;
+  top: -8.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 20px var(--clr),
+  0 0 60px var(--clr);
+}
+#time{
+  position: absolute;
+  display: flex;
+  padding: 10px 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+  inset 5px 5px 20px rgba(255, 255, 255,0.2),
+  inset -5px -5px 15px rgba(0, 0, 0,0.75);
+}
+#time div{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 8px 8px;
+  margin: 4px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr);
+  box-shadow: 0 0 16px var(--clr);
+  border-radius: 50%;
+}
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after{
+  content: ':';
+  position: absolute;
+  
+  bottom: 5px;
+  right: -7px;
+}
+#time div:last-child{
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#time div:nth-child(2)::after{
+  animation: animate 1s steps(1) infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+/* txt */
+.txt{
+  position: absolute;
+  margin-top: 130px;
+}
+.txt p{
+  font-size: 1vw;
+  color: var(--clr);
+  box-shadow: 0 0 5px var(--clr);
+  border-radius: 8px;
+  padding: 10px 20px;
+}

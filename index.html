@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Analog Clock</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="clock">
+      <div class="circle" id="sc" style="--clr:rgb(4, 252, 67);"></div>
+      <div class="circle mn" id="mn" style="--clr:rgb(4, 215, 252);"></div>
+      <div class="circle hr" id="hr" style="--clr:rgb(215, 252, 4);"></div>
+    </div>
+    <div id="time">
+      <div id="hours"  style="--clr:rgb(248, 252, 4);">00</div>
+      <div id="minutes" style="--clr:rgb(4, 215, 252);">00</div>
+      <div id="seconds" style="--clr:rgb(4, 252, 67);">00</div>
+      <div id="ampm">AM</div>
+    </div>
+    <div class="txt" >
+      <p id="text" style="--clr:rgba(255, 255, 255, 0.597);"></p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
